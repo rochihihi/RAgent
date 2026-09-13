@@ -1,0 +1,19 @@
+services:
+  api:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      VERIPATCH_DATABASE_PATH: /app/runs/veripatch.sqlite3
+      VERIPATCH_TEST_RUNNER: local
+    volumes:
+      - ./runs:/app/runs
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,noexec,nosuid
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+

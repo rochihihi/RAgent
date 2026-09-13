@@ -1,0 +1,2 @@
+{"task_id":"discount-percentage","repository":"examples/discount_bug","issue":{"issue_id":"discount-percentage","title":"Discount percentage is treated as a whole number","description":"calculate_discount(100, 10) should return 90, but the implementation subtracts 10 instead of 0.10."},"test_command":["python","-m","pytest","-q"]}
+

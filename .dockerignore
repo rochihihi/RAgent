@@ -1,0 +1,12 @@
+.git
+.github
+.venv
+__pycache__
+.pytest_cache
+.ruff_cache
+.coverage
+runs
+results
+*.sqlite3
+*.pyc
+
